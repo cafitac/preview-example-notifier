@@ -1,0 +1,10 @@
+apiVersion: preview-hub/v1
+service: notifier
+build:
+  context: .
+  dockerfile: Dockerfile
+run:
+  port: 8000
+health:
+  http: /healthz
+  timeout: 90s
